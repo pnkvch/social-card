@@ -1,0 +1,29 @@
+.top-container {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.top-section {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.top-section span:first-child {
+  opacity: 1;
+  font-weight: bold;
+  padding-right: 0.3rem;
+}
+
+.top-section span {
+  font-weight: normal;
+  opacity: 0.5;
+  padding-right: 0.3rem;
+}
