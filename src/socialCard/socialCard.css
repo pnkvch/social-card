@@ -1,0 +1,7 @@
+.main-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
