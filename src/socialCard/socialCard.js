@@ -9,7 +9,7 @@ const SocialCard = () => {
     const quote = "Learning React? Start small.";
     const subQuote =
         "Can't pry yourself from the tutorials? The cure is to make tiny little experiment apps";
-    const { first_name, date, avatar, likes, retweets } = data[0];
+    const { first_name, date, avatar, likes, retweets, domain_name } = data[0];
 
     return (
         <div className="main-container">
@@ -19,7 +19,13 @@ const SocialCard = () => {
                 date={date}
                 avatar={avatar}
             />
-            <MainSocial quote={quote} avatar={avatar} subQuote={subQuote} />
+            <MainSocial
+                quote={quote}
+                avatar={avatar}
+                subQuote={subQuote}
+                domain_name={domain_name}
+                first_name={first_name}
+            />
             <BottomSocial likes={likes} retweets={retweets} />
         </div>
     );
