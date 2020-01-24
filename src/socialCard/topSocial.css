@@ -3,7 +3,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     align-items: flex-start;
-    padding-top: 1rem;
+    padding-top: 1em;
     border-top: 2px solid rgba(153, 153, 153, 0.3);
 }
 
@@ -27,11 +27,11 @@
 .top-section span:first-child {
     opacity: 1;
     font-weight: bold;
-    padding-right: 0.3rem;
+    padding-right: 0.3em;
 }
 
 .top-section span {
     font-weight: normal;
     opacity: 0.5;
-    padding-right: 0.3rem;
+    padding-right: 0.3em;
 }

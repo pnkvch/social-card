@@ -20,15 +20,18 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 1rem;
-    line-height: 1.5;
+    padding: 1em;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
 }
 .link-inside-bottom span:first-child {
     font-weight: bold;
+    padding-bottom: 3px;
 }
 
 .link-inside-bottom span:last-child {
     opacity: 0.5;
+    padding-top: 3px;
 }
 
 .link-wrapper {
@@ -43,7 +46,7 @@
 .main-social {
     display: flex;
     justify-content: flex-end;
-    margin-top: 1rem;
+    margin-top: 1em;
 }
 
 .image-wrapper {
@@ -63,5 +66,8 @@
     background-color: white;
     color: black;
     align-items: center;
-    padding-left: 1rem;
+    padding-left: 1em;
+    color: rgb(255, 160, 31);
+    font-weight: bold;
+    font-size: 1.2em;
 }

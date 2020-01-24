@@ -1,0 +1,42 @@
+.bottom-social {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5em 0 0.5em 0;
+}
+
+.bottom-wrapper {
+    width: 91.5%;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.icon-wrapper div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    margin-right: 2.5em;
+    opacity: 0.5;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: content-box;
+}
+
+.svg-inline--fa {
+    height: 1.25em;
+    width: 1.5em;
+}
+
+.retweet-active {
+    color: green;
+}
+
+.like-active {
+    color: red;
+}
