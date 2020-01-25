@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faRetweet,
@@ -9,20 +9,19 @@ import {
 import "./bottomSocial.css";
 
 const BottomSocial = props => {
-    const { likes, retweets } = props;
+    const { likes, retweets, comments } = props;
     const [likeState, setLikeState] = useState(false);
     const [retweetState, setRetweetState] = useState(false);
+    const likeElement = useRef();
+    const retweetElement = useRef();
 
     const onChange = (state, setState, type) => {
+        let elementClass = type.current.classList;
         if (state) {
-            document
-                .querySelector(`.${type}-container`)
-                .classList.remove(`${type}-active`);
+            elementClass.remove(`${elementClass[0]}-active`);
             setState(false);
         } else {
-            document
-                .querySelector(`.${type}-container`)
-                .classList.add(`${type}-active`);
+            elementClass.add(`${elementClass[0]}-active`);
             setState(true);
         }
     };
@@ -33,11 +32,16 @@ const BottomSocial = props => {
                 <div className="icon-wrapper">
                     <div>
                         <FontAwesomeIcon icon={faComment} />
-                        <span>2</span>
+                        <span>{comments}</span>
                     </div>
                     <div
+                        ref={retweetElement}
                         onClick={() => {
-                            onChange(retweetState, setRetweetState, `retweet`);
+                            onChange(
+                                retweetState,
+                                setRetweetState,
+                                retweetElement
+                            );
                         }}
                         className="retweet-container"
                     >
@@ -45,8 +49,9 @@ const BottomSocial = props => {
                         <span>{retweets}</span>
                     </div>
                     <div
+                        ref={likeElement}
                         onClick={() => {
-                            onChange(likeState, setLikeState, `like`);
+                            onChange(likeState, setLikeState, likeElement);
                         }}
                         className="like-container"
                     >

@@ -33,10 +33,11 @@
     width: 1.5em;
 }
 
-.retweet-active {
+.retweet-container-active {
     color: green;
 }
 
-.like-active {
-    color: red;
+.like-container-active {
+    color: rgb(255, 0, 0);
+    opacity: 1;
 }
