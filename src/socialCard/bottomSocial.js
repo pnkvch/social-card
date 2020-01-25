@@ -15,15 +15,24 @@ const BottomSocial = props => {
     const likeElement = useRef();
     const retweetElement = useRef();
 
-    const onChange = (state, setState, type) => {
-        let elementClass = type.current.classList;
+    const onChange = (state, setState, ref) => {
+        const currentElement = ref.current;
         if (state) {
-            elementClass.remove(`${elementClass[0]}-active`);
+            currentElement.classList.remove(
+                `${currentElement.classList[0]}-active`
+            );
+            currentElement.children[1].innerHTML =
+                parseInt(currentElement.children[1].innerHTML) - 1;
             setState(false);
         } else {
-            elementClass.add(`${elementClass[0]}-active`);
+            currentElement.classList.add(
+                `${currentElement.classList[0]}-active`
+            );
+            currentElement.children[1].innerHTML =
+                parseInt(currentElement.children[1].innerHTML) + 1;
             setState(true);
         }
+        console.log(ref);
     };
 
     return (

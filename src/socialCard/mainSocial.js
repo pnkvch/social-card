@@ -4,16 +4,14 @@ import "./mainSocial.css";
 const MainSocial = props => {
     const { quote, avatar, subQuote, domain_name, first_name } = props;
 
-    const createColor = () => {
-        return "#" + Math.floor(Math.random() * 16777215).toString(16);
-    };
+    const createColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
     return (
         <div className="main-social">
             <div className="link-wrapper">
-                <a href={domain_name}>
+                <a href={`https://${domain_name}`}>
                     <div
-                        style={{ backgroundColor: createColor() }}
+                        style={{ backgroundColor: createColor }}
                         className="link-inside-top"
                     >
                         <div className="image-wrapper">
@@ -22,7 +20,9 @@ const MainSocial = props => {
                         <h3>{quote}</h3>
                         <div className="author-wrapper">
                             <div>
-                                <span>{first_name}</span>
+                                <span style={{ color: createColor }}>
+                                    {first_name}
+                                </span>
                                 <img src={avatar} alt="avatar" />
                             </div>
                         </div>
